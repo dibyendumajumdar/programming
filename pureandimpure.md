@@ -32,7 +32,7 @@ Conversely if a system is throw-away and will not change over time, then less in
 The main approach to creating a system that is change friendly is compose it out of loosely coupled components. This is not a 
 new concept. Breaking a system into components (modules) was recommended by [David Parnas back in 1972](https://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf).
 
-There is a misunderstanding oabout what loose coupling means. For some purists, loose coupling means that components
+There is a misunderstanding about what loose coupling means. For some purists, loose coupling means that components
 must be physically separate processes, communicating via messaging only. This was the approach taken by the J2EE architecture which has
 now fallen out of favour. 
 
