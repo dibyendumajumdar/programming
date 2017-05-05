@@ -19,7 +19,7 @@ using technologies that none of us knew how to operate. But we liked the archiec
 The result was enormous pain as we struggled to make basic things work. The consultants were of course not responsible for delivery, 
 although a few of them tried to help out. We just kept losing time as we struggled with the technology.
 
-What we should have done is to go with the technology we knew, and deliver the functionality the customer wanted. We should have
+What we should have done is to go with the technology we knew well, and deliver the functionality the customer wanted. We should have
 sat down with the customer and explained to them that the only way to get the product delivered within their constraints was to
 go with the simplest technology stack that we all were comfortable with.
 
