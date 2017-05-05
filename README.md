@@ -9,3 +9,5 @@ I decided to host this on github as I think this will allow others to contribute
 version control will allow them to evolve over time, I need not worry about having completed pieces only.
 
 Everything here is draft and unfinished.
+
+* [Importance of Prioritization](./prioritization.md)
