@@ -23,9 +23,16 @@ What we should have worked with the technology we knew well, and deliver the fun
 sat down with the customer and explained to them that the only way to get the product delivered within their constraints was to
 go with the simplest technology stack that we were all comfortable with.
 
-Of course managing changing requirements is also a key factor in delivering on time, but here I want to point out that there were
+Of course managing changing requirements is also a key factor to delivering on time, but here I want to point out that there were
 other areas that often need to be managed as well. As programmers, we tend to have a natural inclination to learn new things, try out
 new approaches and take risks. But when we work on customer projects, we need to put aside our own preferences and understand what
 is necessary to get the project delivered. In particular, projects that are constrained in time and budget are not the right
 vehicles for exploring new technologies.
 
+### The Builder Analogy
+
+I now like to think that we programmers need to think of ourselves as Builders, like the ones you employ to improve your home.
+When you employ a Builder, you tell him or her what your requirements are, and the Builder gives you a timeframe and estimate. 
+Ultimately will you hire a Builder who doesn't try to understand what you want, and then overspends resources and time to then
+cost you twice the amount you had allocated for the home improvement? I wouldn't want such a Builder. And as programmers we need
+to be like the Builder that you would want to hire. 
