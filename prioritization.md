@@ -21,7 +21,7 @@ although a few of them tried to help out. We just kept losing time as we struggl
 
 What we should have done is to go with the technology we knew well, and deliver the functionality the customer wanted. We should have
 sat down with the customer and explained to them that the only way to get the product delivered within their constraints was to
-go with the simplest technology stack that we all were comfortable with.
+go with the simplest technology stack that we were all comfortable with.
 
 Of course managing changing requirements is also a key factor in delivering on time, but here I wanted to point out that there were
 other areas that often need to be managed as well. As programmers, we tend to have a natural inclination to learn new things, try out
