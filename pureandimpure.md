@@ -28,19 +28,17 @@ If the design allows this to happen relatively painlessly over time then it is a
 
 Conversely if a system is throw-away and will not change over time, then less investment in design is obviously appropriate.
 
-## Loosely Coupled System
-One of the approaches to create a system that is change friendly is compose it out of loosely coupled components.
-But there is a misunderstanding of what loosely coupled means. For some purists, loosely coupled means that components
-must be physically separate, communicating via messaging only. This was the approach taken by the J2EE architecture which has
+## Modularity and Loose Coupling
+The main approach to creating a system that is change friendly is compose it out of loosely coupled components. This is not a 
+new concept. Breaking a system into components (modules) was recommended by [David Parnas back in 1972](https://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf).
+
+There is a misunderstanding oabout what loose coupling means. For some purists, loose coupling means that components
+must be physically separate processes, communicating via messaging only. This was the approach taken by the J2EE architecture which has
 now fallen out of favour. 
 
-The question of how loose coupling is to be achieved is quite a tricky one. It can be achieved in a system where the code
-executes within the same process by adopting a design where components have defined interfaces and there is a defined hierarchy
+Loose coupling can be achieved in a system where all the code
+executes inside one monolithic process by adopting a design where components have defined interfaces and there is a defined hierarchy
 of components. See [talks by John Lakos](https://www.youtube.com/watch?v=QjFpKJ8Xx78) on how to design software in this way.
-Eventually though there may come a need to make some components remote, perhaps to allow horizontal scalability. 
-The trick is deciding which components should be remote and which local. 
-
-However if you can get away with a system that has a monolithic process within which all components execute then such a design is preferable as it is simpler.
 
 ## Pragmatic Design
 Design decisions need to be pragmatic. An approach that works if you have adopted an agile development process is to start with simplest 
