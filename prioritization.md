@@ -19,12 +19,13 @@ using technologies that none of us knew how to operate. But we liked the archiec
 The result was enormous pain as we struggled to make basic things work. The consultants were of course not responsible for delivery, 
 although a few of them tried to help out. We just kept losing time as we struggled with the technology.
 
-What we should have done is to go with the technology we knew well, and deliver the functionality the customer wanted. We should have
+What we should have worked with the technology we knew well, and deliver the functionality the customer wanted. We should have
 sat down with the customer and explained to them that the only way to get the product delivered within their constraints was to
 go with the simplest technology stack that we were all comfortable with.
 
-Of course managing changing requirements is also a key factor in delivering on time, but here I wanted to point out that there were
+Of course managing changing requirements is also a key factor in delivering on time, but here I want to point out that there were
 other areas that often need to be managed as well. As programmers, we tend to have a natural inclination to learn new things, try out
 new approaches and take risks. But when we work on customer projects, we need to put aside our own preferences and understand what
-is necessary to get the project delivered.
+is necessary to get the project delivered. In particular, projects that are constrained in time and budget are not the right
+vehicles for exploring new technologies.
 
