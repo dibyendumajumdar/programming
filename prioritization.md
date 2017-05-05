@@ -15,7 +15,7 @@ A basic step is to understand what the customer's priorties are.
 
 In this project that I mention above, the customer's highest priority was delivery on time and budget. Given those priorities, some of the
 decisions we made were incorrect. We had a bunch of consultants working with us who proposed a very nice multi-tier architecture
-using technologies that none of us knew how to operate. But we liked the archiecture as it sounded great, and so we went with it.
+using technologies that none of us knew how to operate. But we liked the architecture as it sounded great, and so we went with it.
 The result was enormous pain as we struggled to make basic things work. The consultants were of course not responsible for delivery, 
 although a few of them tried to help out. We just kept losing time as we struggled with the technology.
 
