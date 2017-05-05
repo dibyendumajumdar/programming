@@ -11,4 +11,4 @@ version control will allow them to evolve over time, I need not worry about havi
 Everything here is draft and unfinished.
 
 * [Importance of Prioritization](./prioritization.md)
-* [Purity versus Pragmatism](./pureimpure.md)
+* [Purity versus Pragmatism](./pureandimpure.md)
