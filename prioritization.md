@@ -33,6 +33,6 @@ vehicles for exploring new technologies.
 
 I now like to think that we programmers need to think of ourselves as Builders, like the ones you employ to improve your home.
 When you employ a Builder, you tell him or her what your requirements are, and the Builder gives you a timeframe and estimate. 
-Ultimately will you hire a Builder who doesn't try to understand what you want, and then overspends resources and time to then
+Ultimately will you hire a Builder who doesn't try to understand what you want, and then overspends resources and time to 
 cost you twice the amount you had allocated for the home improvement? I wouldn't want such a Builder. And as programmers we need
 to be like the Builder that you would want to hire. 
