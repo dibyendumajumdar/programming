@@ -32,12 +32,12 @@ The main approach to creating a system that is change friendly is to compose it 
 new concept. The criteria to apply when deciding how to decompose a system into components was analysed by [David Parnas back in 1972](https://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf).
 
 There is sometimes a misunderstanding about what loose coupling means. For some purists, loose coupling means that components
-must be physically separate processes, communicating via messaging only. This was the approach taken by the J2EE architecture which has
-now fallen out of favour. 
+must be in physically separate processes, communicating via messaging only. This was the approach taken by the J2EE architecture 
+which has now fallen out of favour. 
 
 Loose coupling can be achieved in a monolithic system too, where all the code
-executes inside one monolithic process, by adopting a design where components have defined interfaces and there is a defined hierarchy
-of components. See [talks by John Lakos](https://www.youtube.com/watch?v=QjFpKJ8Xx78) on how to design software in this way.
+executes inside one monolithic process, by adopting a design where components have defined interfaces, components interact via
+interfaces and there is a defined hierarchy of components. See [talks by John Lakos](https://www.youtube.com/watch?v=QjFpKJ8Xx78) on how to design software in this way.
 
 ## Pragmatic Design
 Design decisions need to be pragmatic. An approach that works if you have adopted an agile development process is to start with simplest 
