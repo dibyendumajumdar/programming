@@ -1,7 +1,7 @@
 ## Introduction
 
 Several years ago I was running a project where we were developing a soluton for a client. The client wanted the software to
-be devlivered within a certain budget and time frame. Requirements were not yet finalized, and they were evolving as the 
+be delivered within a certain budget and time frame. Requirements were not yet finalized, and they were evolving as the 
 project went on. I was working for the consultancy that had already committed to delivering the software within those stated 
 constraints.
 
