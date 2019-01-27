@@ -26,3 +26,17 @@ Here is a diagram showing the main components:
 ## Getting Started
 
 We will use [Thonny](https://thonny.org/) to learn how to program. I suggest you download and install Thonny on your computer.
+
+## First program
+
+1. Start Thonny.
+2. Type in following in the Window with title <untitled>.
+```
+  print('hello world')
+```
+3. Click File->Save to get the save window and save the file; name it `lesson1.py`.
+3. Click F5 button (or the green run script button). 
+  
+The program should print 'hello world' in the Shell window.
+
+You have written your first Python program.
