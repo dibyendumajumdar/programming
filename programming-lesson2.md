@@ -1,4 +1,4 @@
-# Programmig Lesson 2
+# Programming Lesson 2
 
 ## Initial words
 
