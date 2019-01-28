@@ -4,8 +4,8 @@
 
 Firstly I want to point out a couple of things in the hello world program we wrote before.
 
-* `print` is a Python command (actually a function but for now let us think of it as a command).
-* `'hello world'` is a 'string' which is usually used to represent Text values. We will see other kinds of values in this lesson and the next few lessons.
+* `print` is a Python command (actually a function call but you will learn more about that below).
+* `'hello world'` is a 'string' which is usually used to represent Text values. We will come across other kinds of values in this lesson and over the next few lessons.
 
 ## Consecutive steps
 
@@ -41,15 +41,7 @@ Notice that we can think of this problem in a different way.
 
 This way of thinking is what you need to become a programmer. You take a problem and find ways to express it that is in an 'algorithmic' way, like creating a formula. The advantage of the formula is that it can work not just with this number problem but any problem of the same type.
 
-For example, above we printed 1 to 5. But we could also print 5 to 10, or 10 to 15. We don't want to have to write 15 lines of program such as:
-
-```
-print(1)
-...
-print(15)
-```
-
-everytime we need to print a set of numbers. Instead we want to say somthing like:
+For example, above we printed 1 to 5. But we could also print 5 to 15, or 10 to 150. We don't want to have to write multiple lines of `print` every time we want to print some numbers. Instead we want to say somthing like:
 
 ```
 please_print(1,5)
@@ -59,7 +51,7 @@ Where we are saying please print 1 to 5.
 Or we could say:
 
 ```
-please_print(5,10)
+please_print(10,150)
 ```
 
 So how do we do this?
