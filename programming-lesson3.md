@@ -26,8 +26,9 @@ We also like to deal with composite values that are made up of other values. Exa
 
 * List or Array of values - such as `[1, 2, 3, 4]`
 * Dictionary or Map of values
+* Values made of other values, such as Structure or Object 
 
-When we write programs in Python, we use values such as above, and Pythn translates these to what the Computer understands.
+When we write programs in Python, we use values such as above, and Python translates those to what the Computer understands.
 
 For example:
 
