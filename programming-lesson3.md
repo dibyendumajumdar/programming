@@ -8,9 +8,10 @@ contains 8 'bits', where a bit is something that is either '1' or '0'.
 
 The Computer also understands some larger units that are made up of bytes, such as:
 
-* 'word' - typically made of 4 bytes
-* 'quad word' - typically made of 8 bytes
-* 'double' - represents decimal number, usually takes 8 bytes.
+* 'word' - typically made of 2 bytes
+* 'dword' - typically made of 4 bytes, 'd stands for 2 or double'
+* 'qword' - typically made of 8 bytes, 'q' stands for 'quad'
+* 'float' - represents decimal number, usually takes 4 or 8 bytes.
 And so on.
 
 But while the computer deals with 'bits', 'bytes', etc. programers prefer to not worry about this. We like to work with values that are
