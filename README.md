@@ -13,6 +13,9 @@ Everything here is draft and unfinished.
 ## Learning Programming
 
 * [Lesson 1](https://github.com/dibyendumajumdar/programming/blob/master/programming-lesson1.md)
+* [Lesson 2](https://github.com/dibyendumajumdar/programming/blob/master/programming-lesson2.md)
+* [Lesson 3](https://github.com/dibyendumajumdar/programming/blob/master/programming-lesson3.md)
+
 
 ## Notes
 
