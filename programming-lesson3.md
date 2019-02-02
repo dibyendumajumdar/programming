@@ -6,7 +6,7 @@ in memory while doing work.
 The memory is basically a large area that is made up of 'bytes'. Think of the 'byte' as a unit of computer memory. Typically each 'byte' 
 contains 8 'bits', where a bit is something that is either '1' or '0'. 
 
-We can also combine bytes to make larger items such as:
+The Computer also understands some larger units that are made up of bytes, such as:
 
 * 'word' - typically made of 4 bytes
 * 'quad word' - typically made of 8 bytes
