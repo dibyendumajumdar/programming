@@ -14,10 +14,9 @@ which are general and should be applied regardless of methodology of development
 A basic step is to understand what the customer's priorties are.
 
 In this project that I mention above, the customer's highest priority was delivery on time and budget. Given those priorities, some of the
-decisions we made were incorrect. We had a bunch of consultants working with us who proposed a very nice multi-tier architecture
-using technologies that none of us knew how to operate. But we liked the architecture as it sounded great, and so we went with it.
-The result was enormous pain as we struggled to make basic things work. The consultants were of course not responsible for delivery, 
-although a few of them tried to help out. We just kept losing time as we struggled with the technology.
+decisions we made were incorrect. We decided to build a very nice multi-tier architecture using technologies that none of us knew how 
+to operate. But we liked the architecture as it sounded great, and so we went with it.
+The result was enormous pain as we struggled to make basic things work. We just kept losing time as we struggled with the technology.
 
 What we should have done is work with the technology we knew well, and deliver the functionality the customer wanted. We should have
 sat down with the customer and explained to them that the only way to get the product delivered within their constraints was to
