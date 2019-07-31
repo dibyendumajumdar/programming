@@ -1,8 +1,6 @@
 # Purity versus Pragmatism
-Over the years I have often come across Solution Architects and Systems Analysts who want every design to be pure,
-based on whatever principles they adhere to. Often you find that such purists have never actually written a program or
-built software by their own hands. They tend to have a theoretical view of how software should be developed and 
-rely on nice design diagrams.
+Over the years I have often come across organizations that want every design to be pure,
+based on whatever principles they adhere to. 
 
 There are many pitfalls in persuing a very purist approach. 
 
