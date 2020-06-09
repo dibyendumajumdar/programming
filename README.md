@@ -20,4 +20,4 @@ Everything here is draft and unfinished.
 ## Notes
 
 * [Importance of Prioritization](./prioritization.md)
-* [Purity versus Pragmatism](./pureandimpure.md)
+* [General Principles of Software Design](./pureandimpure.md)
