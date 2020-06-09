@@ -1,12 +1,9 @@
-# Purity versus Pragmatism
-Over the years I have often come across organizations that want every design to be pure,
-based on whatever principles they adhere to. 
-
-There are many pitfalls in persuing a very purist approach. 
+# General Principles of Software Design
 
 ## Design Paradigms Change
 Over time what is considered good design changes. To take only one example, at one time everyone thought that Object Oriented
-design was the answer, but that view has now changed.
+design was the answer, but that view has now changed. We need to bear in mind that there is no absolute way to decide what is
+good design although some basic principles can be applied.
 
 ## When a Pistol Would Do
 The attention given to the design of a piece of software should be in proportion to its criticality and importance rather than
