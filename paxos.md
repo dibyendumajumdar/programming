@@ -62,7 +62,7 @@ The processes receiving the `prepare` message are called `acceptors`. The `prepa
    > Each process is required to remember, despite crashes, the highest proposal number it ever accepted, along with its 
      associated value.
    
-   > Each process is also required to remember the max proposal number `n` in a `prepare` message it ever promised.
+   > Each process is also required to remember the max proposal number `n` of a `prepare` message it ever promised to.
    
 On receiving a `prepare` request each process must do following;
    
