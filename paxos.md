@@ -48,61 +48,59 @@ in individual processes.
 
 ### Phase 1 - select a proposer
 
-   In the first phase, a proposer generates its next proposal number `n`, and sends a `prepare` message to all processes. 
-   The processes receiving the `prepare` message are called `acceptors`. The `prepare` message is a request that:
+In the first phase, a proposer generates its next proposal number `n`, and sends a `prepare` message to all processes. 
+The processes receiving the `prepare` message are called `acceptors`. The `prepare` message is a request that:
    
-   a) The acceptor promise to not accept proposals less than proposal number `n`. 
-   
-      > This prevents acceptors from accepting proposals from older proposers.
+1. The acceptor promise to not accept proposals less than proposal number `n`. 
+  
+   > This prevents acceptors from accepting proposals from older proposers.
       
-   b) The acceptor return the highest proposal number less than `n` that the `acceptor` ever accepted and the accepted `value`.
+2. The acceptor return the highest proposal number less than `n` that the `acceptor` ever accepted and the accepted `value`.
       
-      > This request enables the `proposer` to learn of a previous consensus `value` - and allows Paxos to handle failures of `proposers`.
+   > This request enables the `proposer` to learn of a previous consensus `value` - and allows Paxos to handle failures of `proposers`.
    
-      > Each process is required to remember, despite crashes, the highest proposal number it ever accepted, along with its 
-        associated value.
+   > Each process is required to remember, despite crashes, the highest proposal number it ever accepted, along with its 
+     associated value.
    
-      > Each process is also required to remember the max proposal number `n` it ever responded to.
+   > Each process is also required to remember the max proposal number `n` it ever responded to.
    
-   On receiving a `prepare` request each process must do following;
+On receiving a `prepare` request each process must do following;
    
-   a) If the proposal number `n` in the `prepare` request is less than a proposal number already promised then ignore it. 
+1. If the proposal number `n` in the `prepare` request is less than a proposal number already promised then ignore it. 
       
-      > This enables processes to reject `prepare` messages from older proposers. It might be beneficial to reject rather than
-        ignore such a request so that the `proposer` gets to know it is out of date, but this is not required by Paxos.
+   > This enables processes to reject `prepare` messages from older proposers. It might be beneficial to reject rather than
+     ignore such a request so that the `proposer` gets to know it is out of date, but this is not required by Paxos.
       
-   b) Otherwise, reply with a promise to never accept any proposal less than `n`. And include the last accepted proposal
-      number and its value, if this process has ever accepted a value. 
+2. Otherwise, reply with a promise to never accept any proposal less than `n`. And include the last accepted proposal
+   number and its value, if this process has ever accepted a value. 
       
-      > It follows that this must be a proposal less than `n`. Note that an `acceptor` is free to respond to a new `proposer` 
-        with higher `n`.)
+   > It follows that this must be a proposal less than `n`. Note that an `acceptor` is free to respond to a new `proposer` 
+     with higher `n`.)
       
 ### Phase 2 - select a value
 
-   a) The `proposer` must obtain promises from a majority of processes, else has to abandon the proposal. 
+1. The `proposer` must obtain promises from a majority of processes, else has to abandon the proposal. 
    
-      > The `proposer` may only hear back from `acceptors` if its proposal number `n` was greater than any proposal 
-        already submitted. It may use a timeout to avoid waiting indefinitely.
+   > The `proposer` may only hear back from `acceptors` if its proposal number `n` was greater than any proposal 
+     already submitted. It may use a timeout to avoid waiting indefinitely.
    
-   b) If any promise response contains previously accepted proposal number/value then the `proposer` must use the 
-      value of the highest such proposal number, instead of the value it originally wanted to get agreement on. 
+2. If any promise response contains previously accepted proposal number/value then the `proposer` must use the 
+   value of the highest such proposal number, instead of the value it originally wanted to get agreement on. 
       
-      > This is how Paxos ensures that a new `proposer` learns of the last consensus value. Because the promises
-        are from a majority, it follows that at least one response will have the last known consensus value and the
-        highest proposal number seen prior to `n`.
+   > This is how Paxos ensures that a new `proposer` learns of the last consensus value. Because the promises
+     are from a majority, it follows that at least one response will have the last known consensus value and the
+     highest proposal number seen prior to `n`.
       
-   c) If none of the promises contained a proposal number / value then the proposer should propose the value it wanted
-      to. 
+3. If none of the promises contained a proposal number / value then the proposer should propose the value it wanted
+   to. 
 
-   d) Proposer now broadcasts the chosen value and proposal number to all processes in an `accept` message.
+4. Proposer now broadcasts the chosen value and proposal number to all processes in an `accept` message.
    
-   e) Processes that receive `accept` message must accept the proposal and the value iif they have not promised to 
-      ignore proposal number `n`. They must store the accepted value and proposal number in persistent 
-      storage before replying.
+5. Processes that receive `accept` message must accept the proposal and the value iif they have not promised to 
+   ignore proposal number `n`. They must store the accepted value and proposal number in persistent 
+   storage before replying.
       
-   f) Once the proposer receives an ack to its `accept` message from a majority of processes it can consider the value 
-      chosen. 
+6. Once the proposer receives an ack to its `accept` message from a majority of processes it can consider the value 
+   chosen. 
       
 
-
-      
