@@ -36,8 +36,8 @@ in individual processes.
    
 3. Paxos orders events by the proposal number, hence a number `1` by `proposer` `A` precedes the number `2` by `proposer` `B`. 
 
-   > The proposal numbers acts a logical timestamp and is used to place a total ordering on all proposals. See Lamport's paper on this 
-     topic.)
+   > The proposal number acts a logical timestamp and is used to place a total ordering on all proposals. See Lamport's paper on this 
+     topic.
    
 4. The Paxos algorithm requires knowing what constitutes a majority or quorum for obtaining a consensus.
 
@@ -62,7 +62,7 @@ The processes receiving the `prepare` message are called `acceptors`. The `prepa
    > Each process is required to remember, despite crashes, the highest proposal number it ever accepted, along with its 
      associated value.
    
-   > Each process is also required to remember the max proposal number `n` it ever responded to.
+   > Each process is also required to remember the max proposal number `n` in a `prepare` message it ever promised.
    
 On receiving a `prepare` request each process must do following;
    
@@ -71,11 +71,11 @@ On receiving a `prepare` request each process must do following;
    > This enables processes to reject `prepare` messages from older proposers. It might be beneficial to reject rather than
      ignore such a request so that the `proposer` gets to know it is out of date, but this is not required by Paxos.
       
-2. Otherwise, reply with a promise to never accept any proposal less than `n`. And include the last accepted proposal
-   number and its value, if this process has ever accepted a value. 
+2. Otherwise, reply with a promise to never accept any proposal less than `n`, and include the last accepted proposal
+   number and its value, if this process has ever accepted a value. The process must record the proposal number `n`
+   in durable storage before responding.
       
-   > It follows that this must be a proposal less than `n`. Note that an `acceptor` is free to respond to a new `proposer` 
-     with higher `n`.)
+   > Note that an `acceptor` is free to respond to a new `proposer` with higher `n`.
       
 ### Phase 2 - select a value
 
@@ -88,19 +88,19 @@ On receiving a `prepare` request each process must do following;
    value of the highest such proposal number, instead of the value it originally wanted to get agreement on. 
       
    > This is how Paxos ensures that a new `proposer` learns of the last consensus value. Because the promises
-     are from a majority, it follows that at least one response will have the last known consensus value and the
+     are from a majority, it follows that at least one response will contain the last known consensus value and the
      highest proposal number seen prior to `n`.
       
 3. If none of the promises contained a proposal number / value then the proposer should propose the value it wanted
    to. 
 
-4. Proposer now broadcasts the chosen value and proposal number to all processes in an `accept` message.
+4. Proposer now broadcasts its value and proposal number `n` to all processes in an `accept` message.
    
 5. Processes that receive `accept` message must accept the proposal and the value iif they have not promised to 
-   ignore proposal number `n`. They must store the accepted value and proposal number in persistent 
+   ignore proposal number `n`. If accepting, they must store the accepted value and proposal number in persistent 
    storage before replying.
       
 6. Once the proposer receives an ack to its `accept` message from a majority of processes it can consider the value 
-   chosen. 
+   chosen.
       
 
