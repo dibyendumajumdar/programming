@@ -1,6 +1,6 @@
 # Paxos Consensus Algorithm
 
-Paxos is an algorithm that can be used by a group of processes that wish to achieve consensus on a single result, despite failures
+Paxos, in its basic form, is an algorithm that can be used by a group of processes that wish to achieve consensus on **a single result**, despite failures
 in individual processes. 
 
 ## Assumptions
@@ -8,13 +8,18 @@ in individual processes.
 1. Each process has access to persistent storage where it can record its current state. Processes may die but Paxos requires 
    that a process should be able to recover its state from persistent storage.
    
-2. Processes communicate via messaging. 
+2. Processes communicate via messaging. Messages may be lost due to network issues.
 
 ## Goals of the algorithm
 
-1. The goal of Paxos is to achieve consensus on a single value. (This value may not be the value that a `proposer` originally 
-   wanted to get consensus on. This property ensures that Paxos can handle scenarios where a `proposer` has failed, and another 
-  `proposer` must therefore learn about the value that was last agreed on.)
+1. The goal of Paxos is to achieve consensus on **a single value**. 
+
+   > Once a value is chosen, all further attempts to get consensus will result in the same value. Hence Paxos in its basic form 
+     cannot be used to select more than one value. 
+
+   > The selected value in Paxos may not be the value that a `proposer` originally wanted to get consensus on. This property 
+     ensures that Paxos can handle scenarios where a `proposer` has failed, and another `proposer` must therefore learn about 
+     the value that was last agreed on.
 
 ## Basic ideas
 
@@ -54,8 +59,8 @@ in individual processes.
    On receiving a `prepare` request each process must do following;
    
    a) If the proposal number `n` in the `prepare` request is less than a proposal number already seen then ignore the request. 
-      (This enables processes to reject `prepare` messages from older proposers. It might be beneficial to reject such a request
-       so that the `proposer` gets to know it is out of date, but this is not required by Paxos.)
+      (This enables processes to reject `prepare` messages from older proposers. It might be beneficial to reject rather than
+       ignore such a request so that the `proposer` gets to know it is out of date, but this is not required by Paxos.)
       
    b) Otherwise, reply with a promise to never accept any proposal less than `n`. And include the last accepted proposal
       number and its value, if this process has ever accepted a value. (It follows that this must be a proposal less than
@@ -88,8 +93,7 @@ in individual processes.
       
 ## Observation
 
-* The algorithm is designed to agree on a single value, and once a value is chosen, all further proposals are bound to
-  select the same value. Hence Paxos in this form cannot be used to select more than one value.
+* The algorithm is designed to agree on a single value, and 
 
 
       
