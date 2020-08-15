@@ -26,7 +26,7 @@ in individual processes.
 1. Paxos allows any number of `proposers`. 
 
    > It is recommended that one `proposer` acts as a leader, although this is not required. Leader election is not specified by Paxos. 
-     However the algorithm ensures that any `proposer` can function correctly. In the absense of a leader it is
+     However the algorithm ensures that any `proposer` can function correctly. In the absence of a leader it is
      possible for two or more `proposers` to thrash around each failing to obtain consensus.
 
 2. Each `proposer` in Paxos must be able to generate a unique monotonically increasing proposal number `n`. No two proposers should
